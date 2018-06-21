@@ -1,7 +1,3 @@
-# hello-world
+# 简介
 
-Hi Hummers!
-
-AaronHero here, I like Node.js and Coffeescript (that`s what 2's wade of !),
-I've had tacos on the moon and fine them far suserior to Earth tacos;
-Done!
+在建设网站过程中遇到了许多许多的疑问，踩了很多坑，希望可以通过这个repository可以把解决方案保存下来，分享给各位
