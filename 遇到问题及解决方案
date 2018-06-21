@@ -1,0 +1,21 @@
+安装宝塔面板和wordpress
+1、博客地址：https://blog.csdn.net/gla2018/article/details/79690194
+2、宝塔面板安装：https://www.aliyunbaike.com/ecs/684/
+    centos版本：yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.sh && sh install.sh
+    ubuntu版本：wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && sudo bash install.sh
+
+3、wordpress安装：https://www.aliyunbaike.com/ecs/423/
+    （此方法对于我自己来说不适用）
+4、wordpress通过上述无法安装配置请查看：http://www.wphostcn.com/?p=112
+    （此版本目前来说是我所用到的适合的,及:wordpress需要复制到你所创建站点的文件夹下，
+        数据库和xfp等的用户名名密码记住或保存好）
+5、wordpress自动更新或更新时，遇到无法更新的情况：
+    首先会让连接xfp：主机名、xfp用户名、xfp密码（主机名一般为localhost）
+    遇到更新时无法下载的问题：https://blog.csdn.net/qq_32846595/article/details/54766833
+    （解决wordpress下载插件，安装失败，无法创建目录问题首先我想说一下网上好多的解决方法，都是要我们改一下目录的权限，
+    但是，将文件夹权限改成777还是没有解决问题。问了学长，才知道，这个方法是很危险的，同时也是有错误的。
+    其实，出现无法创建目录的确是权限的问题，但是，不是目录读写的权限，而是用户组的问题。
+    想要下载插件的用户组为web用户组，用户名组名为 www
+    （大家可能不太一样，如果是按照我之前的方式装lnmp环境的同学，就是www，可以在ngnix.conf中第一行查看，
+        至于nginx.conf的位置就用locate nginx.conf搜索一下） ，
+    而此时wordpress用户组为root，这样就不能创建目录了）
